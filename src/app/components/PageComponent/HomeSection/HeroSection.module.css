@@ -1,0 +1,27 @@
+.titleSlideIn {
+  display: block; /* separate line */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: titleSlideIn 0.5s ease-out forwards;
+}
+
+.fadeInSoft {
+  display: block; /* separate line */
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeInSoft 0.45s ease-out forwards;
+}
+
+@keyframes titleSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSoft {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
