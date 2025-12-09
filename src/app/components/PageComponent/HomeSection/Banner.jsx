@@ -19,7 +19,6 @@ function MinimalPrevArrow({ onClick }) {
       type="button"
     >
       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/25">
-        {/* Left-facing chevron */}
         <span className=" block h-[9px] w-[9px] border-l border-t border-white/70 -rotate-45 translate-x-[1px] cursor-pointer" />
       </span>
       <span className="hidden lg:inline">Previous</span>
@@ -39,7 +38,6 @@ function MinimalNextArrow({ onClick }) {
     >
       <span className="hidden lg:inline">Next</span>
       <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/25">
-        {/* Right-facing chevron */}
         <span className=" cursor-pointer block h-[9px] w-[9px] border-r border-b border-white/70 -rotate-45 -translate-x-[1px]" />
       </span>
     </button>
@@ -125,7 +123,7 @@ export default function HeroSection() {
           {slides.map((slide, i) => (
             <div key={i}>
               <div className="relative h-[80vh] md:h-screen w-full">
-                {/* Background media */}
+              
                 {slide.type === "video" ? (
                   <video
                     src={slide.media}
@@ -146,17 +144,15 @@ export default function HeroSection() {
                   />
                 )}
 
-                {/* Gradient overlays */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
 
-                {/* Content */}
+    
                 <div
                   key={`slide-content-${currentSlide}-${i}`}
                   className="absolute inset-0 flex items-center px-5 md:px-10 lg:px-24"
                 >
                   <div className="max-w-3xl text-left text-white">
-                    {/* Label */}
                     <p
                       className={`${styles.fadeInSoft} text-[11px] md:text-xs uppercase tracking-[0.24em] text-white/60`}
                       style={{ animationDelay: "0.05s" }}
@@ -164,7 +160,6 @@ export default function HeroSection() {
                       Study abroad made simple
                     </p>
 
-                    {/* Title + Subtitle */}
                     <h1 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.15]">
                       <span
                         className={`${styles.titleSlideIn} block text-white mb-1`}
@@ -181,7 +176,7 @@ export default function HeroSection() {
                       </span>
                     </h1>
 
-                    {/* Description */}
+                   
                     <p
                       className={`mt-4 max-w-xl text-sm md:text-base leading-relaxed text-white/80 ${styles.fadeInSoft}`}
                       style={{ animationDelay: "0.45s" }}
@@ -189,14 +184,11 @@ export default function HeroSection() {
                       {slide.description}
                     </p>
 
-                    {/* CTA block with proper spacing and balanced buttons */}
                     <div
                       className={`${styles.fadeInSoft} mt-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4`}
                       style={{ animationDelay: "0.6s" }}
                     >
-                      {/* Primary CTA */}
-                     {/* Primary CTA - Enhanced */}
-{/* Primary CTA - Same color, more pop */}
+                    
 <Link
   href={slide.link}
   className="inline-flex items-center justify-center rounded-lg
@@ -216,14 +208,14 @@ export default function HeroSection() {
 </Link>
 
 
-                      {/* Secondary button */}
+                   
                      <Link href="/destinations/australia" passHref>
   <button
     type="button"
     className="inline-flex items-center
                text-[12px] md:text-[13px]
                text-white/70 hover:text-white/95
-               transition-colors px-4 py-2"
+               transition-colors px-4 py-2 cursor-pointer"
   >
     View destinations
     <span className="ml-1.5 block h-[8px] w-[8px] border-r border-b border-white/70 -rotate-45" />

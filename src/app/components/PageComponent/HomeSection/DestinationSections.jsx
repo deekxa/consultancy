@@ -6,7 +6,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Link from "next/link";
 
-// Fix for default marker icon (JS only, no TS)
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -266,9 +265,7 @@ export default function DestinationsSection() {
     <section className="w-full pt-20  bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#EBE8FF]">
     
 
-      {/* MAIN CONTENT (centered container) */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 ">
-        {/* Title + toggle */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3 text-[#110053]">
             Study <span className="text-[#5e4bb8]">destinations</span>
@@ -317,7 +314,6 @@ export default function DestinationsSection() {
           </div>
         </div>
 
-        {/* MAP VIEW */}
         {activeView === "map" && (
           <div className="mb-12 animate-fadeIn">
             <div className="relative z-0 w-full h-[500px] md:h-[600px] rounded-2xl shadow-sm overflow-hidden border border-[#e5e7eb] bg-white hover:shadow-lg transition-shadow duration-300">
@@ -432,7 +428,6 @@ export default function DestinationsSection() {
           </div>
         )}
 
-        {/* GRID VIEW */}
         {activeView === "grid" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-6 mb-4">
             {destinations.map((destination) => (
@@ -477,7 +472,6 @@ export default function DestinationsSection() {
           </div>
         )}
       </div>
-        {/* FULL‑WIDTH STATS BAR (edge to edge, no side padding) */}
       <div className="w-full bg-white border-y border-[#e5e7eb] mt-24 ">
         <div
           ref={statsRef}

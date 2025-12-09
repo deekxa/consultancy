@@ -1,4 +1,3 @@
-// components/ReviewsSection.jsx
 'use client';
 
 import FallbackImage from '../../ui/FallbackImage';
@@ -7,7 +6,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import Link from 'next/link';
 import { useState, useCallback, useEffect } from 'react';
 
-/* 1) Video + social-style testimonials */
 
 const videoReviews = [
   {
@@ -134,7 +132,6 @@ function VideoTestimonials() {
     <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(168,159,255,0.18),_transparent_60%)]" />
 
-      {/* Heading aligned with DestinationsSection */}
       <div className="text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3 text-[#110053]">
           Student <span className="text-[#5e4bb8]">testimonials</span>
@@ -145,7 +142,6 @@ function VideoTestimonials() {
       </div>
 
       <div className="relative">
-        {/* left arrow */}
         <button
           type="button"
           onClick={scrollPrev}
@@ -167,7 +163,7 @@ function VideoTestimonials() {
           ‹
         </button>
 
-        {/* right arrow */}
+ 
         <button
           type="button"
           onClick={scrollNext}
@@ -189,7 +185,6 @@ function VideoTestimonials() {
           ›
         </button>
 
-        {/* Embla viewport */}
         <div
           className="embla overflow-hidden"
           ref={emblaRef}
@@ -248,7 +243,6 @@ function VideoTestimonials() {
                       </p>
                     </div>
 
-                    {/* body */}
                     <div className="flex-1 flex flex-col gap-3">
                       {review.type === 'video' ? (
                         <div className="relative w-full rounded-xl overflow-hidden bg-black/5 border border-[#e5e7eb] shadow-inner aspect-video">
@@ -275,7 +269,7 @@ function VideoTestimonials() {
                       )}
                     </div>
 
-                    {/* footer */}
+      
                     <div className="mt-4 flex items-center justify-between text-[11px] text-[#6b7280]">
                       <div className="flex items-center gap-4">
                         <button
@@ -308,8 +302,6 @@ function VideoTestimonials() {
   );
 }
 
-/* 2) Google review cards – same gradient band */
-
 function GoogleReviews() {
   return (
     <div className="w-full bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#EBE8FF] pb-20 mt-12">
@@ -317,7 +309,7 @@ function GoogleReviews() {
         className="max-w-7xl mx-auto px-6 lg:px-8 pt-4"
         aria-label="Google reviews"
       >
-        {/* header */}
+      
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
           <div>
             <p className="text-xs font-semibold tracking-[0.22em] uppercase text-[#8b7ae8]">
@@ -372,9 +364,8 @@ function GoogleReviews() {
           </a>
         </div>
 
-        {/* 5 Google-style review cards */}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {/* Abishek */}
+          
           <article className="bg-white rounded-2xl border border-[#e4e1ff] shadow-sm p-5 flex flex-col gap-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
@@ -401,7 +392,7 @@ function GoogleReviews() {
             </p>
           </article>
 
-          {/* Pankaj */}
+        
           <article className="bg-white rounded-2xl border border-[#e4e1ff] shadow-sm p-5 flex flex-col gap-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
@@ -427,7 +418,7 @@ function GoogleReviews() {
             </p>
           </article>
 
-          {/* Puskar */}
+         
           <article className="bg-white rounded-2xl border border-[#e4e1ff] shadow-sm p-5 flex flex-col gap-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
@@ -453,7 +444,7 @@ function GoogleReviews() {
             </p>
           </article>
 
-          {/* Priya */}
+         
           <article className="bg-white rounded-2xl border border-[#e4e1ff] shadow-sm p-5 flex flex-col gap-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
@@ -479,7 +470,6 @@ function GoogleReviews() {
             </p>
           </article>
 
-          {/* Sujan */}
           <article className="bg-white rounded-2xl border border-[#e4e1ff] shadow-sm p-5 flex flex-col gap-3">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
@@ -511,7 +501,6 @@ function GoogleReviews() {
 }
 
 
-/* 3) Combined export – drop this into your page */
 
 export default function ReviewsSection() {
   return (

@@ -55,9 +55,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* Study Destinations */}
             <div className="relative group" ref={destRef}>
               <button
                 onClick={() => {
@@ -121,7 +119,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Test Preparation dropdown */}
             <div className="relative group" ref={testRef}>
               <button
                 onClick={() => {
@@ -185,7 +182,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Services */}
             <Link
               href="/services"
               className="relative text-[#110053] hover:text-[#a89fff] font-medium text-sm tracking-wide transition-all duration-300 py-2 group"
@@ -194,7 +190,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#a89fff] to-[#6F6597] transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
-            {/* About Us */}
+          
             <Link
               href="/about"
               className="relative text-[#110053] hover:text-[#a89fff] font-medium text-sm tracking-wide transition-all duration-300 py-2 group"
@@ -203,7 +199,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#a89fff] to-[#6F6597] transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
-            {/* FAQs */}
+           
             <Link
               href="/faqs"
               className="relative text-[#110053] hover:text-[#a89fff] font-medium text-sm tracking-wide transition-all duration-300 py-2 group"
@@ -212,7 +208,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#a89fff] to-[#6F6597] transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
-            {/* Free Counselling CTA */}
+            
             <Link
               href="/contact"
               className="relative px-6 py-2.5 text-white font-semibold text-sm tracking-wide rounded-lg overflow-hidden group/cta transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-purple-500/40"
@@ -223,7 +219,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+    
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-[#110053] hover:text-[#a89fff] hover:bg-purple-50 focus:outline-none transition-all duration-300"
@@ -240,11 +236,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+       
         {isOpen && (
           <div className="lg:hidden border-t border-purple-100/30 animate-fadeInDown">
             <div className="px-4 pt-2 pb-4 space-y-1">
-              {/* Study Destinations mobile */}
+            
               <button
                 onClick={() => setIsDestOpen(!isDestOpen)}
                 className="flex w-full justify-between items-center px-4 py-3 rounded-lg text-[#110053] hover:text-[#a89fff] hover:bg-[#EBE8FF] font-medium text-sm transition-all duration-300"
@@ -281,7 +277,6 @@ export default function Navbar() {
                   </Link>
                 ))}
 
-              {/* Test Preparation mobile */}
               <button
                 onClick={() => setIsTestOpen(!isTestOpen)}
                 className="mt-1 flex w-full justify-between items-center px-4 py-3 rounded-lg text-[#110053] hover:text-[#a89fff] hover:bg-[#EBE8FF] font-medium text-sm transition-all duration-300"
@@ -318,7 +313,6 @@ export default function Navbar() {
                   </Link>
                 ))}
 
-              {/* Other links */}
               <Link
                 href="/services"
                 className="block px-4 py-3 rounded-lg text-[#110053] hover:text-[#a89fff] hover:bg-[#EBE8FF] font-medium text-sm transition-colors duration-300"
@@ -341,7 +335,6 @@ export default function Navbar() {
                 FAQs
               </Link>
 
-              {/* Free Counselling CTA Mobile */}
               <Link
                 href="/consultation"
                 className="relative block mx-2 mt-3 overflow-hidden rounded-lg group/cta"

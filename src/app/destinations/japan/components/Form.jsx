@@ -148,14 +148,3 @@ export default function FormJapan({ open, course, onClose }) {
   );
 }
 
-// Example usage for Japan
-/*
-<FormJapan
-  open={true}
-  course={{
-    title: "Bachelor of International Business",
-    institution: "University of Tokyo"
-  }}
-  onClose={() => console.log("Closed")}
-/>
-*/

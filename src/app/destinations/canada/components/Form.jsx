@@ -149,14 +149,3 @@ export default function Form({ open, course, onClose }) {
   );
 }
 
-// Example usage for Canada
-/*
-<Form
-  open={true}
-  course={{
-    title: "Bachelor of Computer Science",
-    institution: "University of Toronto"
-  }}
-  onClose={() => console.log("Closed")}
-/>
-*/

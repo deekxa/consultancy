@@ -1,4 +1,4 @@
-// components/HomeSection.jsx
+
 'use client';
 
 import Link from 'next/link';
@@ -30,7 +30,6 @@ export default function HomeSection() {
       className="relative min-h-[calc(100vh-80px)] bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#EBE8FF] overflow-hidden py-16 lg:py-20"
       aria-label="Hero section"
     >
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {!prefersReducedMotion && (
           <>
@@ -51,14 +50,12 @@ export default function HomeSection() {
           </>
         )}
         
-        {/* Floating Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(168,159,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(168,159,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
 
-          {/* Left Content - responsive slight right shift */}
           <div className="flex flex-col justify-between space-y-6 pr-0 md:pr-2 lg:pr-8 md:ml-2 lg:ml-6">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-[#110053] leading-[1.15] tracking-tight">
@@ -73,15 +70,14 @@ export default function HomeSection() {
                 Nepal's leading education consultancy with 15 years of expertise. We've helped 500+ students secure admissions to top universities in Australia, Canada, UK, USA & New Zealand with personalized guidance and visa support.
               </p>
               
-              {/* CTA Buttons without shadows */}
               <div className="flex flex-wrap gap-4 pt-2">
             <Link
-  href="/consultation"
+  href="/faqs"
   className="group relative inline-flex items-center justify-center rounded-lg px-7 py-3.5 text-sm font-semibold text-white bg-[#110053] shadow-sm shadow-black/30 
              hover:shadow-md hover:shadow-black/40 
              hover:-translate-y-[1px] active:translate-y-0
              overflow-hidden transition-all duration-150 will-change-transform"
-  aria-label="Book Free Counseling"
+  aria-label="have questions?"
 >
   <span className="relative z-10 flex items-center gap-2">
     Book Free Counseling
@@ -101,15 +97,14 @@ export default function HomeSection() {
     </svg>
   </span>
 
-  {/* Gradient overlay */}
   <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#110053] to-[#2c007f] opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-lg z-0" />
 </Link>
 
 
 
                 
-                <Link 
-                  href="/success-stories" 
+                {/* <Link 
+                  href="/testimonial" 
                   className="group inline-flex items-center justify-center bg-white text-[#110053] px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide border-2 border-[#f1eaff] hover:border-[#e6def8] transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#a89fff]/30 focus:ring-offset-2"
                   aria-label="View student success stories"
                 >
@@ -119,12 +114,11 @@ export default function HomeSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
           
-          {/* Right Image Section - slightly left & wider */}
           <div className="relative flex items-center justify-end lg:justify-end">
             <div className="absolute inset-0 flex items-center justify-end lg:justify-end" aria-hidden="true">
               <div className="w-[320px] h-[320px] bg-gradient-to-br from-[#a89fff]/10 to-[#8b7ae8]/5 rounded-full blur-3xl animate-pulse" />
@@ -145,7 +139,6 @@ export default function HomeSection() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#110053]/20 via-transparent to-[#a89fff]/20 group-hover:opacity-0 transition-opacity duration-500" aria-hidden="true" />
               </div>
 
-              {/* Floating badges without shadows */}
               <div 
                 className="absolute -top-3 -right-3 bg-white rounded-xl p-3 border border-[#e6def8] hover:-translate-y-1 transition-all duration-300"
                 role="complementary"
@@ -185,7 +178,6 @@ export default function HomeSection() {
         </div>
       </div>
 
-      {/* Bottom Wave Transition */}
       <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
           <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white" fillOpacity="0.1"/>

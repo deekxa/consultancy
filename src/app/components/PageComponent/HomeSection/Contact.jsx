@@ -9,7 +9,7 @@ export default function ContactCtaSection() {
         className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-0 md:px-8"
         style={{ minHeight: "400px" }}
       >
-        {/* LEFT IMAGE */}
+       
         <div className="flex-1 flex items-end justify-start md:pl-0 md:ml-[-80px]">
           <div className="relative w-full h-full min-h-[400px] flex items-end justify-start">
             <div
@@ -36,7 +36,6 @@ export default function ContactCtaSection() {
           </div>
         </div>
 
-        {/* RIGHT: CTA */}
        <div className="flex-1 flex flex-col justify-center items-center px-6 md:pl-16 py-8 md:py-0">
   <h2 className="font-extrabold text-3xl md:text-4xl mb-2 text-[#032867]">
     Talk to a counselor

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import FormNZ from "./FormNZ";
 
-// ------------------ NEW ZEALAND COURSES ------------------
 const DATA = [
   {
     id: 1,
@@ -63,7 +62,6 @@ const DATA = [
   },
 ];
 
-// ------------------ FILTER OPTIONS ------------------
 const INTAKES = ["February", "March", "July"];
 const LEVELS = ["Foundation", "Undergraduate", "Postgraduate"];
 const DISCIPLINES = [
@@ -74,7 +72,6 @@ const DISCIPLINES = [
   "Creative Arts",
 ];
 
-// ------------------ COMPONENT ------------------
 export default function CourseSearchAndApplyNZ() {
   const [search, setSearch] = useState("");
   const [intake, setIntake] = useState("");
@@ -125,7 +122,6 @@ export default function CourseSearchAndApplyNZ() {
 
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2 text-center">
-      {/* Heading */}
       <div className="mb-4 sm:mb-6">
         <h1 className="text-2xl sm:text-4xl font-bold text-[#110053]">
           Discover courses in New Zealand
@@ -135,7 +131,6 @@ export default function CourseSearchAndApplyNZ() {
         </p>
       </div>
 
-      {/* Search + Filters */}
       <form
         className="w-full bg-white rounded-xl shadow px-3 py-4 mb-6 flex flex-col md:flex-row gap-4 items-center"
         onSubmit={(e) => e.preventDefault()}
@@ -186,7 +181,6 @@ export default function CourseSearchAndApplyNZ() {
       </form>
 
       <div className="flex w-full gap-8">
-        {/* Sidebar Filters */}
         <aside
           className={`bg-white rounded-2xl shadow border border-[#e6def8] w-[250px] shrink-0 p-5 md:block ${
             showFiltersMobile ? "" : "hidden md:block"
@@ -225,7 +219,6 @@ export default function CourseSearchAndApplyNZ() {
           </button>
         </aside>
 
-        {/* Results */}
         <main className="flex-1 min-w-0">
           <div className="bg-white rounded-xl mb-3 px-6 py-3 flex items-center justify-between text-[#888] text-sm shadow border border-[#e6def8]">
             <span>Showing {filteredCourses.length} result(s)</span>

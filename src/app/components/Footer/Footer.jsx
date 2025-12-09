@@ -12,7 +12,6 @@ export default function Footer() {
         bg-gradient-to-b from-[#262163] via-[#1b154a] to-[#0b061f]
       "
     >
-      {/* Wave at the top */}
       <div className="absolute inset-x-0 -top-24 h-28 pointer-events-none">
         <svg
           className="w-full h-full"
@@ -20,7 +19,7 @@ export default function Footer() {
           preserveAspectRatio="none"
         >
           <path
-            fill="#262163"  // match top gradient color
+            fill="#262163"  
             d="
               M0,192
               C120,176 240,144 360,138
@@ -37,7 +36,6 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-16 pt-20 pb-10">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 lg:gap-16">
-          {/* Left: logo + line */}
           <div className="flex-1 flex flex-col gap-5">
             <div className="flex items-center gap-3">
               <div className="h-9 w-9 rounded-full bg-gradient-to-br from-[#8b7ae8] via-[#a89fff] to-[#6F6597] flex items-center justify-center text-[9px] font-semibold tracking-[0.16em]">
@@ -58,7 +56,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Middle: links */}
           <div className="flex-1 flex flex-col sm:flex-row gap-10 lg:gap-16">
             <div className="min-w-[140px]">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55 mb-3">
@@ -142,7 +139,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right: socials */}
           <div className="flex-1 flex flex-col items-start lg:items-end gap-4">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
               Connect
@@ -182,7 +178,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom text only – no straight border line */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/55">
           <p>© {year} EducationTreeGlobal. All rights reserved.</p>
           <p className="sm:text-right">

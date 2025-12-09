@@ -8,7 +8,6 @@ import FAQSectionJapan from "./components/FAQSectionJapan";
 export default function JapanPage() {
   const [angleOffset, setAngleOffset] = useState(0);
 
-  // Smooth slow rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setAngleOffset((prev) => prev + 0.0008);
@@ -41,19 +40,15 @@ export default function JapanPage() {
 
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-[#fffaf0] via-[#f0f0ff] to-[#e8f0ff] relative">
-    {/* HERO SECTION */}
 <section className="relative w-full min-h-[550px] flex items-center justify-center overflow-hidden mb-0">
-  {/* Background Image */}
   <img
     src="/country/japan1.jpeg"
     alt="Study in Japan hero"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Gradient Overlay */}
   <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-[#22223b]/60" />
 
-  {/* Center Text */}
   <div className="relative z-10 w-full px-6 lg:px-16 py-20 flex flex-col items-center text-center animate-slideUp">
     <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(30,20,80,0.96)]">
       Study in Japan
@@ -64,7 +59,6 @@ export default function JapanPage() {
     </p>
   </div>
 
-  {/* ⭐ ULTRA GLASSY TRANSPARENT BREADCRUMB - PURPLE THEME WITH SLIDE UP */}
   <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm bg-white/[0.02] border-t border-white/5 py-4 animate-slideUpBreadcrumb">
     <nav className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center gap-3 text-base sm:text-lg font-bold">
       <a
@@ -83,9 +77,7 @@ export default function JapanPage() {
 </section>
 
 
-      {/* ORBIT SECTION */}
       <section className="relative w-full min-h-[1200px] md:min-h-[1300px] flex items-center justify-center select-none pt-30 pb-30 overflow-hidden">
-        {/* SVG connectors */}
         <svg
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           width="2000"
@@ -109,7 +101,6 @@ export default function JapanPage() {
           ))}
         </svg>
 
-        {/* Center Image */}
         <div className="absolute z-20 text-center">
           <Image
             src="/country/japan.jpg"
@@ -123,7 +114,6 @@ export default function JapanPage() {
           </h2>
         </div>
 
-        {/* Orbit Cards */}
         {cards.map((card, i) => (
           <div
             key={i}
@@ -148,7 +138,6 @@ export default function JapanPage() {
         ))}
       </section>
 
-      {/* BOTTOM SECTIONS */}
       <section className="w-full pb-20 space-y-16">
         <CourseSearchAndApplyJapan />
         <FAQSectionJapan />

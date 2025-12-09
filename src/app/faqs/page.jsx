@@ -82,14 +82,11 @@ export default function FAQSection() {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#ebe8ff] py-16 px-6 mt-10 lg:mt-20">
-      {/* Centered heading at the top */}
       <h2 className="text-4xl md:text-5xl font-bold text-[#110053]  font-sans text-center mb-24">
         Frequently Asked Questions
       </h2>
 
-      {/* Layout: FAQs and cute right panel */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20">
-        {/* LEFT: FAQ List (unchanged) */}
         <div className="w-full lg:w-3/5 flex flex-col justify-center">
           <div className="mb-10">
             <div className="flex items-center rounded-full bg-white px-4 py-3 border border-gray-300 shadow-sm focus-within:ring-2 focus-within:ring-[#4f46e5] transition-colors duration-300">
@@ -173,7 +170,6 @@ export default function FAQSection() {
           </div>
         </div>
 
-        {/* RIGHT: Cute stacked FAQ bubbles, dark theme */}
         <div
           className="w-full lg:w-2/5 flex items-center justify-center relative rounded-xl shadow-xl overflow-hidden"
           style={{
@@ -181,7 +177,6 @@ export default function FAQSection() {
             minHeight: '440px',
           }}
         >
-          {/* Decorative faint background icons */}
           <svg width="100%" height="100%" className="absolute inset-0 pointer-events-none" style={{zIndex:1}} viewBox="0 0 420 440">
             <g opacity="0.08">
               <circle cx="60" cy="60" r="28" fill="#FFF" />
@@ -193,19 +188,18 @@ export default function FAQSection() {
             </g>
           </svg>
 
-          {/* Stack of large dark chat bubbles for FAQ */}
           <div className="flex flex-col gap-3 z-10 relative items-center">
-            {/* F */}
+          
             <div className="relative px-10 py-6 rounded-2xl bg-[#232762] shadow-md flex items-center mb-[-16px]" style={{minWidth:98}}>
               <span className="text-[44px] sm:text-5xl md:text-6xl font-extrabold text-white font-sans tracking-wider drop-shadow">F</span>
               <div className="absolute right-[-20px] top-6 w-5 h-5 bg-[#232762] rounded-tr-lg transform rotate-45 shadow" />
             </div>
-            {/* A */}
+        
             <div className="relative px-10 py-6 rounded-2xl bg-[#322897] shadow-md flex items-center mb-[-16px]" style={{minWidth:98}}>
               <span className="text-[44px] sm:text-5xl md:text-6xl font-extrabold text-white font-sans tracking-wider drop-shadow">A</span>
               <div className="absolute left-[-20px] bottom-6 w-5 h-5 bg-[#322897] rounded-bl-lg transform rotate-45 shadow" />
             </div>
-            {/* Q */}
+          
             <div className="relative px-10 py-6 rounded-2xl bg-[#4f46e5] shadow-md flex items-center" style={{minWidth:98}}>
               <span className="text-[44px] sm:text-5xl md:text-6xl font-extrabold text-white font-sans tracking-wider drop-shadow">Q</span>
               <div className="absolute right-[-20px] bottom-6 w-5 h-5 bg-[#4f46e5] rounded-br-lg transform rotate-45 shadow" />

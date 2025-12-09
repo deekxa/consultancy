@@ -27,7 +27,6 @@ export default function FAQSectionAustralia() {
   ];
 
   const [openIndexes, setOpenIndexes] = useState(new Set());
-  // Keep track of which are opening vs closing for transition duration
   const [openingIndexes, setOpeningIndexes] = useState(new Set());
 
   const toggleFaq = (index) => {
@@ -35,11 +34,9 @@ export default function FAQSectionAustralia() {
       const updated = new Set(prev);
       const opening = new Set(openingIndexes);
       if (updated.has(index)) {
-        // Closing: remove from open set, remove from opening set
         updated.delete(index);
         opening.delete(index);
       } else {
-        // Opening: add to open set, add to opening set
         updated.add(index);
         opening.add(index);
       }

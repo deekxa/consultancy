@@ -9,12 +9,12 @@ const DATA = [
     title: "BSc Computer Science",
     institution: "University of Manchester",
     logo: "/logos/um.png",
-    tuitionFee: "£22,000 / year",      // typical international tuition range £11,400–£38,000 :contentReference[oaicite:1]{index=1}
-    applicationFee: "£100",            // set real application fee
-    duration: "36 months",             // UK bachelor 3 yrs (4 yrs in Scotland) :contentReference[oaicite:2]{index=2}
+    tuitionFee: "£22,000 / year",     
+    applicationFee: "£100",           
+    duration: "36 months",            
     intakes: "September", 
-    postStudyWork: true,               // UK offers post-study options (subject to visa rules)
-    englishScore: "6.5",               // typical IELTS requirement
+    postStudyWork: true,               
+    englishScore: "6.5",              
     discipline: "Information Technology",
     level: "Undergraduate",
   },
@@ -23,19 +23,19 @@ const DATA = [
     title: "MSc Data Science",
     institution: "University of Edinburgh",
     logo: "/logos/ed.png",
-    tuitionFee: "£24,500 / year",      // typical PG range £9,000–£30,000 :contentReference[oaicite:3]{index=3}
+    tuitionFee: "£24,500 / year",     
     applicationFee: "£120",
-    duration: "12 months",             // many UK master's are 1 year :contentReference[oaicite:4]{index=4}
+    duration: "12 months",            
     intakes: "September",
     postStudyWork: true,
     englishScore: "6.5",
     discipline: "Data Science / Computing",
     level: "Postgraduate",
   },
-  // more items ...
+  
 ];
 
-const INTAKES = ["September", "January"];  // adjust as per actual unis
+const INTAKES = ["September", "January"];  
 const LEVELS = ["Undergraduate", "Postgraduate", "Foundation"];
 const DISCIPLINES = [
   "Information Technology",

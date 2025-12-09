@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import CourseSearchAndApplyUK from "./components/CourseSearchAndApply";  // you may rename components appropriately
+import CourseSearchAndApplyUK from "./components/CourseSearchAndApply";  
 import FAQSectionUK from "./components/FAQSectionUK";
 
 export default function UKPage() {
   const [angleOffset, setAngleOffset] = useState(0);
 
-  // Smooth slow rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setAngleOffset((prev) => prev + 0.0008);
@@ -48,29 +47,29 @@ export default function UKPage() {
     {
       title: "Typical Costs (International Students)",
       items: [
-        "UG: ~£11,000–£38,000 / year",  // depending on uni & subject :contentReference[oaicite:0]{index=0}
-        "PG: ~£9,000–£30,000 / year (varies by field)",  // :contentReference[oaicite:1]{index=1}
-        "Living (London): ~£1,300–£1,400 / month",  // :contentReference[oaicite:2]{index=2}
-        "Living (other cities): ~£900–£1,300 / month",  // :contentReference[oaicite:3]{index=3}
+        "UG: ~£11,000–£38,000 / year",  
+        "PG: ~£9,000–£30,000 / year (varies by field)", 
+        "Living (London): ~£1,300–£1,400 / month",  
+        "Living (other cities): ~£900–£1,300 / month",  
       ],
     },
     {
       title: "Timeline & Visa",
       items: [
         "Main intake: September", 
-        "Some universities offer January / February intake",  // :contentReference[oaicite:4]{index=4}
+        "Some universities offer January / February intake", 
         "Apply 6–9 months early (CAS, visa, funds)", 
-        "Show funds: tuition + living cost per UKVI rules",  // :contentReference[oaicite:5]{index=5}
+        "Show funds: tuition + living cost per UKVI rules",  
       ],
     },
     {
       title: "Requirements",
       items: [
         "Acceptance (CAS) from licensed university", 
-        "Tuition fees + living cost funds in bank",  // :contentReference[oaicite:6]{index=6}
+        "Tuition fees + living cost funds in bank",  
         "English language proof (IELTS/TOEFL etc.)", 
         "Academic transcripts / credentials", 
-        "Health insurance (NHS surcharge)",  // many universities include/require this :contentReference[oaicite:7]{index=7}
+        "Health insurance (NHS surcharge)",  
       ],
     },
     {
@@ -87,7 +86,7 @@ export default function UKPage() {
         "Globally recognised degrees",
         "One‑year master’s → faster entry to job market",
         "Vibrant student life & multicultural society",
-        "Work part-time while studying, plus post‑study visa",  // assume post‑study visa (Graduate Route)
+        "Work part-time while studying, plus post‑study visa",  
       ],
     },
   ];
@@ -102,19 +101,15 @@ export default function UKPage() {
 
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#ebe8ff] relative">
-    {/* TOP HERO SECTION */}
 <section className="relative w-full min-h-[550px] flex items-center justify-center overflow-hidden mb-0">
-  {/* Background Image */}
   <img
     src="/country/uk3.jpeg"
     alt="Study in UK hero"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Gradient Overlay */}
   <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-[#22223b]/60" />
 
-  {/* Center Text */}
   <div className="relative z-10 w-full px-6 lg:px-16 py-20 flex flex-col items-center text-center animate-slideUp">
     <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(30,20,80,0.96)]">
       Study in UK
@@ -125,7 +120,6 @@ export default function UKPage() {
     </p>
   </div>
 
-  {/* ⭐ ULTRA GLASSY TRANSPARENT BREADCRUMB - PURPLE THEME WITH SLIDE UP */}
   <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm bg-white/[0.02] border-t border-white/5 py-4 animate-slideUpBreadcrumb">
     <nav className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center gap-3 text-base sm:text-lg font-bold">
       <a
@@ -144,7 +138,7 @@ export default function UKPage() {
 </section>
 
 
-      {/* ORBIT SECTION WITH FIXED SPACING */}
+
       <section
         className="
           relative
@@ -160,7 +154,6 @@ export default function UKPage() {
           overflow-hidden
         "
       >
-        {/* SVG connectors */}
         <svg
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           width="2000"
@@ -184,7 +177,6 @@ export default function UKPage() {
           ))}
         </svg>
 
-        {/* Center Image */}
         <div className="absolute z-20 text-center">
           <Image
             src="/country/uk2.jpeg"
@@ -198,7 +190,6 @@ export default function UKPage() {
           </h2>
         </div>
 
-        {/* Orbit Cards */}
         {cards.map((card, i) => (
           <div
             key={i}
@@ -223,7 +214,6 @@ export default function UKPage() {
         ))}
       </section>
 
-      {/* BOTTOM SECTIONS WITH FIXED SPACING */}
       <section className="w-full pb-20 space-y-16">
         <CourseSearchAndApplyUK />
         <FAQSectionUK />

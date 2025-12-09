@@ -149,14 +149,3 @@ export default function Form({ open, course, onClose }) {
   );
 }
 
-// Example usage for Europe:
- /*
-<Form
-  open={true}
-  course={{
-    title: "Bachelor of Computer Science",
-    institution: "ETH Zurich"
-  }}
-  onClose={() => console.log("Closed")}
-/>
-*/

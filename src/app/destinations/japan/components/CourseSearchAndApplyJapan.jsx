@@ -122,7 +122,6 @@ export default function CourseSearchAndApplyJapan() {
 
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2 text-center">
-      {/* Top heading */}
       <div className="mb-4 sm:mb-6">
         <h1 className="text-2xl sm:text-4xl font-bold text-[#110053]">
           Discover courses in Japan
@@ -132,7 +131,6 @@ export default function CourseSearchAndApplyJapan() {
         </p>
       </div>
 
-      {/* Search + filters row */}
       <form
         className="w-full bg-white rounded-xl shadow px-3 py-4 mb-6 flex flex-col md:flex-row gap-4 items-center"
         onSubmit={(e) => e.preventDefault()}
@@ -180,7 +178,6 @@ export default function CourseSearchAndApplyJapan() {
       </form>
 
       <div className="flex w-full gap-8">
-        {/* Sidebar filters */}
         <aside
           className={`bg-white rounded-2xl shadow border border-[#e6def8] w-[250px] shrink-0 p-5 md:block ${
             showFiltersMobile ? "" : "hidden md:block"
@@ -217,7 +214,6 @@ export default function CourseSearchAndApplyJapan() {
           </button>
         </aside>
 
-        {/* Results */}
         <main className="flex-1 min-w-0 ml-0 md:ml-0">
           <div className="bg-white rounded-xl mb-3 px-6 py-3 flex items-center justify-between text-[#888] text-sm shadow border border-[#e6def8]">
             <span>Showing {filteredCourses.length} result(s)</span>

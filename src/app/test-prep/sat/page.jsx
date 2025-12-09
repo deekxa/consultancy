@@ -12,7 +12,6 @@ const BookPage = forwardRef(function BookPage(props, ref) {
   );
 });
 
-// 1 TAB = 1 PAGE
 const TAB_TO_PAGE = {
   overview: 0,
   dates: 1,
@@ -116,27 +115,21 @@ export default function SATPage() {
 
   return (
     <main className="relative min-h-screen w-full bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#ebe8ff]">
-      {/* HERO */}
-      {/* HERO SECTION */}
 <section className="relative w-full min-h-[550px] flex items-center justify-center overflow-hidden mb-0">
-  {/* Background Image */}
   <img
     src="/heroimage/image3.jpg"
     alt="SAT preparation hero"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Gradient Overlay */}
   <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-[#22223b]/60" />
 
-  {/* Center Text */}
   <div className="relative z-10 w-full px-6 lg:px-16 py-20 flex flex-col items-center text-center animate-slideUp">
     <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(30,20,80,0.96)]">
       SAT (Digital) Test Preparation
     </h1>
   </div>
 
-  {/* ⭐ ULTRA GLASSY TRANSPARENT BREADCRUMB - PURPLE THEME WITH SLIDE UP */}
   <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm bg-white/[0.02] border-t border-white/5 py-4 animate-slideUpBreadcrumb">
     <nav className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center gap-3 text-base sm:text-lg font-bold">
       <a
@@ -155,7 +148,6 @@ export default function SATPage() {
 </section>
 
 
-      {/* NAVBAR – same style */}
       <section className="mb-8">
         <div className="mx-auto max-w-5xl px-4">
           <div className="flex w-full flex-wrap gap-[1px] rounded-md border border-[#e1d7ff] bg-[#f9f7ff]">
@@ -189,7 +181,6 @@ export default function SATPage() {
         </div>
       </section>
 
-      {/* FLIPBOOK SECTION */}
       <section className="pb-24 pt-2">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6">
           <div className="space-y-2 text-center">
@@ -205,7 +196,6 @@ export default function SATPage() {
           </div>
 
           <div className="relative mt-4 flex justify-center">
-            {/* Left (Prev) */}
             <button
               aria-label="Previous page"
               onClick={handlePrev}
@@ -214,7 +204,6 @@ export default function SATPage() {
               Prev
             </button>
 
-            {/* Right (Next) */}
             <button
               aria-label="Next page"
               onClick={handleNext}
@@ -223,7 +212,6 @@ export default function SATPage() {
               Next
             </button>
 
-            {/* FLIPBOOK (center) */}
             <div className="flex justify-center overflow-hidden">
               <HTMLFlipBook
                 ref={bookRef}
@@ -250,7 +238,6 @@ export default function SATPage() {
                 disableFlipByClick={false}
                 className="flipbook-shadow rounded-3xl bg-gradient-to-br from-[#faf9ff] via-[#f0edff] to-[#ebe8ff]"
               >
-                {/* 0 – OVERVIEW COVER */}
                 <BookPage className="overflow-hidden rounded-xl !p-0">
                   <section className="relative flex h-full w-full flex-col overflow-hidden rounded-xl bg-gradient-to-br from-[#e8e3ff] via-[#f0edff] to-[#ebe8ff]">
                     <div className="absolute left-6 top-10 h-14 w-14 rotate-12 bg-[#7a67c1] opacity-25"></div>
@@ -326,7 +313,6 @@ export default function SATPage() {
                   </section>
                 </BookPage>
 
-                {/* 1 – DATES & CENTRES */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -377,7 +363,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 2 – ELIGIBILITY */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -423,7 +408,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 3 – PREPARATION */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -467,7 +451,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 4 – PATTERN & TASKS */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -517,7 +500,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 5 – RESULTS, SCORES & FEES */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f5f2ff] px-7 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -593,7 +575,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 6 – FAQS */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -634,7 +615,6 @@ export default function SATPage() {
                   </div>
                 </BookPage>
 
-                {/* 7 – DOWNLOAD GUIDE */}
                 <BookPage>
                   <div className="flex h-full w-full flex-col bg-[#f4f1ff] px-7 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
                     <p className="mb-1 text-[10px] uppercase tracking-[0.14em] text-[#7f6cff]">
@@ -671,7 +651,6 @@ export default function SATPage() {
             </div>
           </div>
 
-          {/* Small-screen Prev/Next */}
           <div className="mt-4 flex items-center justify-center gap-3 sm:hidden">
             <button
               onClick={handlePrev}

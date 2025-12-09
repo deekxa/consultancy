@@ -37,7 +37,7 @@ const steps = [
 
 export default function ProcessScrollFlow() {
   return (
-    <section className="w-full bg-[#faf9ff] py-16">
+    <section  id="process-section" className="w-full bg-[#faf9ff] py-16">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#110053] text-center mb-12">
           Our{' '}
@@ -81,7 +81,7 @@ export default function ProcessScrollFlow() {
 
 function ScrollStep({ index, title, description, align, icon }) {
   const ref = useRef(null);
-  const [progress, setProgress] = useState(0); // 0 → 1
+  const [progress, setProgress] = useState(0); 
 
   useEffect(() => {
     const el = ref.current;
@@ -112,23 +112,18 @@ function ScrollStep({ index, title, description, align, icon }) {
 
   const isLeft = align === 'left';
 
-  // These control the connector overlap—tweak as needed for your design
-  const PATH_LENGTH = 110; // shorter so endpoint is closer to circle
+  const PATH_LENGTH = 110; 
   const dashOffset = PATH_LENGTH * (1 - progress);
   const cardVisible = progress > 0.15;
 
-  // Negative margin so the card/circle overlap the timeline
-  const CARD_OFFSET = 28; // px - tune depending on visual, try 28~36
-
+  const CARD_OFFSET = 28; 
   return (
     <div
       ref={ref}
       className="relative min-h-[220px] md:min-h-[260px] flex items-center"
     >
-      {/* Center vertical guide line */}
       <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#e4e0ff]" />
 
-      {/* Thin chic connector for this step (desktop) */}
       <div className="hidden md:block absolute inset-0 pointer-events-none">
         <svg
           className="absolute inset-0 w-full h-full"
@@ -137,7 +132,6 @@ function ScrollStep({ index, title, description, align, icon }) {
         >
           {isLeft ? (
             <>
-              {/* subtle background line – hairline */}
               <path
                 d="M50 0 V50 H41"
                 fill="none"
@@ -145,7 +139,6 @@ function ScrollStep({ index, title, description, align, icon }) {
                 strokeWidth="0.6"
                 strokeLinecap="round"
               />
-              {/* glow layer – thin + soft */}
               <path
                 d="M50 0 V50 H41"
                 fill="none"
@@ -160,7 +153,6 @@ function ScrollStep({ index, title, description, align, icon }) {
                   transition: 'stroke-dashoffset 0.35s linear',
                 }}
               />
-              {/* main line – slim */}
               <path
                 d="M50 0 V50 H41"
                 fill="none"
@@ -176,7 +168,6 @@ function ScrollStep({ index, title, description, align, icon }) {
             </>
           ) : (
             <>
-              {/* subtle background line – hairline */}
               <path
                 d="M50 0 V50 H59"
                 fill="none"
@@ -184,7 +175,6 @@ function ScrollStep({ index, title, description, align, icon }) {
                 strokeWidth="0.6"
                 strokeLinecap="round"
               />
-              {/* glow layer – thin + soft */}
               <path
                 d="M50 0 V50 H59"
                 fill="none"
@@ -199,7 +189,6 @@ function ScrollStep({ index, title, description, align, icon }) {
                   transition: 'stroke-dashoffset 0.35s linear',
                 }}
               />
-              {/* main line – slim */}
               <path
                 d="M50 0 V50 H59"
                 fill="none"
@@ -238,7 +227,6 @@ function ScrollStep({ index, title, description, align, icon }) {
         </svg>
       </div>
 
-      {/* CARD: hierarchy + hover micro‑interaction */}
       <div
         className={`
           group
@@ -266,7 +254,6 @@ function ScrollStep({ index, title, description, align, icon }) {
             group-hover:border-[#d2c7ff]
           `}
         >
-          {/* Icon circle */}
           <div className="
             w-12 h-12 mx-auto mb-3
             rounded-full bg-[#f3f0ff]
@@ -278,7 +265,6 @@ function ScrollStep({ index, title, description, align, icon }) {
             <span className="text-xl">{icon}</span>
           </div>
 
-          {/* Step label */}
           <p className="
             text-[11px] font-semibold tracking-[0.12em]
             text-[#7a68d7] uppercase mb-1
@@ -286,14 +272,12 @@ function ScrollStep({ index, title, description, align, icon }) {
             STEP {index + 1}
           </p>
 
-          {/* Title */}
           <p className="
             text-base font-semibold text-[#110053] mb-1.5
           ">
             {title}
           </p>
 
-          {/* Description */}
           <p className="
             text-sm leading-relaxed text-[#5a5470]
           ">

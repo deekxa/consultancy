@@ -1,4 +1,4 @@
-"use client";  // <-- Add this at the very top
+"use client";  
 
 import React, { useState, useMemo } from 'react';
 import Slider from 'react-slick';
@@ -32,8 +32,8 @@ export default function TrustSection() {
     autoplaySpeed: 3500,
     slidesToShow,
     slidesToScroll: 1,
-    swipe: false, // disables user swipe/drag
-    arrows: false, // disable arrows to keep only dots
+    swipe: false, 
+    arrows: false,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
@@ -50,7 +50,7 @@ export default function TrustSection() {
       aria-label="Trusted partners"
       style={{ paddingLeft: 0, paddingRight: 0, overflowX: 'hidden' }}
     >
-      {/* Header */}
+      
       <div className="text-center mb-12 px-8 sm:px-10">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#110053] leading-[1.2] tracking-tight">
           Our{' '}
@@ -60,7 +60,7 @@ export default function TrustSection() {
         </h2>
       </div>
 
-      {/* Slider */}
+  
       <div className="w-full px-0">
         <Slider {...settings}>
           {trustedCompanies.map((company, index) => (
@@ -103,7 +103,7 @@ export default function TrustSection() {
         </Slider>
       </div>
 
-      {/* Dots styles */}
+    
       <style jsx>{`
         @keyframes gradient {
           0%, 100% {

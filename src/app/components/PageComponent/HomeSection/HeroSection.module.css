@@ -1,12 +1,12 @@
 .titleSlideIn {
-  display: block; /* separate line */
+  display: block; 
   opacity: 0;
   transform: translateY(10px);
   animation: titleSlideIn 0.5s ease-out forwards;
 }
 
 .fadeInSoft {
-  display: block; /* separate line */
+  display: block; 
   opacity: 0;
   transform: translateY(8px);
   animation: fadeInSoft 0.45s ease-out forwards;

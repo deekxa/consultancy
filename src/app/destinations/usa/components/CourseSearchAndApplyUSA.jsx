@@ -4,17 +4,16 @@ import { useState, useEffect } from "react";
 import Form from "./Form";
 
 const DATA = [
-  // Example US courses — replace/add more real universities/courses as needed
   {
     id: 1,
     title: "BSc Computer Science",
     institution: "Massachusetts Institute of Technology (MIT)",
     logo: "/logos/mit.png",
-    tuitionFee: "US$53,790 / year",       // typical UG tuition 2025-26
+    tuitionFee: "US$53,790 / year",      
     applicationFee: "US$75",
     duration: "48 months",
     intakes: "September",
-    postStudyWork: true,                  // eligible for OPT (12 months) + STEM extension
+    postStudyWork: true,                 
     englishScore: "100 TOEFL / 7.5 IELTS",
     discipline: "Information Technology",
     level: "Undergraduate",
@@ -75,7 +74,7 @@ const DATA = [
     discipline: "Arts & Humanities",
     level: "Undergraduate",
   },
-  // add more courses...
+ 
 ];
 
 const INTAKES = ["September", "January"];

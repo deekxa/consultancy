@@ -19,9 +19,7 @@ export default function NewZealandPage() {
   const imageH = 350;
   const RADIUS = 500;
 
-  // ------------------------------------------
-  //      NEW ZEALAND — COMPLETE ACCURATE INFO
-  // ------------------------------------------
+ 
   const cardConfig = [
     {
       title: "Benefits",
@@ -102,20 +100,17 @@ export default function NewZealandPage() {
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-[#fdfcff] via-[#f3f0ff] to-[#ece9ff] relative">
 
-      {/* ---------------- HERO ---------------- */}
-     {/* HERO SECTION */}
+      
 <section className="relative w-full min-h-[550px] flex items-center justify-center overflow-hidden mb-0">
-  {/* Background Image */}
+ 
   <img
     src="/country/newzealand2.jpg"
     alt="Study in New Zealand hero"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Gradient Overlay */}
   <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-[#241d46]/60" />
 
-  {/* Center Text */}
   <div className="relative z-10 w-full px-6 lg:px-16 py-20 flex flex-col items-center text-center animate-slideUp">
     <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-[0_4px_24px_rgba(30,20,80,0.96)]">
       Study in New Zealand
@@ -126,7 +121,6 @@ export default function NewZealandPage() {
     </p>
   </div>
 
-  {/* ⭐ ULTRA GLASSY TRANSPARENT BREADCRUMB - PURPLE THEME WITH SLIDE UP */}
   <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm bg-white/[0.02] border-t border-white/5 py-4 animate-slideUpBreadcrumb">
     <nav className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center gap-3 text-base sm:text-lg font-bold">
       <a
@@ -144,7 +138,6 @@ export default function NewZealandPage() {
   </div>
 </section>
 
-      {/* ---------------- ORBIT SECTION ---------------- */}
       <section
         className="
           relative w-full min-h-[1200px] md:min-h-[1300px]
@@ -152,7 +145,6 @@ export default function NewZealandPage() {
           pt-30 pb-30 overflow-hidden
         "
       >
-        {/* Lines + Dots */}
         <svg
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           width="2000"
@@ -176,7 +168,6 @@ export default function NewZealandPage() {
           ))}
         </svg>
 
-        {/* Center Image */}
         <div className="absolute z-20 text-center">
           <Image
             src="/country/newzealand1.jpg"
@@ -190,7 +181,6 @@ export default function NewZealandPage() {
           </h2>
         </div>
 
-        {/* Orbit Cards */}
         {cards.map((card, i) => (
           <div
             key={i}
@@ -215,7 +205,6 @@ export default function NewZealandPage() {
         ))}
       </section>
 
-      {/* ---------------- BOTTOM ---------------- */}
       <section className="w-full pb-20 space-y-16">
         <CourseSearchAndApply />
         <FAQSectionNZ />
